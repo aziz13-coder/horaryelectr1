@@ -9,6 +9,7 @@ const isDev = !app.isPackaged;
 function createWindow() {
   const win = new BrowserWindow({ width: 800, height: 600 });
 
+
   if (isDev) {
     // In development load the Vite dev server running on localhost
     win.loadURL('http://localhost:5173');
