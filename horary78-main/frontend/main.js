@@ -11,8 +11,9 @@ function createWindow() {
 
 
   if (isDev) {
-    // In development load the Vite dev server running on localhost
-    win.loadURL('http://localhost:5173');
+    // In development load the Vite dev server. Defaults to http://localhost:3000
+    const devUrl = process.env.DEV_SERVER_URL || 'http://localhost:3000';
+    win.loadURL(devUrl);
   } else {
     // In production load the built index.html from the dist folder
     win.loadFile(path.join(__dirname, 'dist/index.html'));
